@@ -42,7 +42,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sr-Ka-YkT">
                                 <rect key="frame" x="128" y="360" width="119" height="30"/>
@@ -66,65 +66,48 @@
                                 </state>
                                 <connections>
                                     <action selector="checkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVE-tb-we5"/>
-                                    <segue destination="bRO-QC-gX8" kind="show" identifier="go_To_label" id="Aka-S9-Fjy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQS-WY-iDD">
+                                <rect key="frame" x="72" y="477" width="231" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="3im-R0-dDb"/>
+                                    <constraint firstAttribute="height" constant="49" id="RvT-di-h88"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.18383652019999999" green="0.2435527569" blue="0.8358978426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0sr-Ka-YkT" firstAttribute="top" secondItem="BKR-3G-Fbu" secondAttribute="bottom" constant="53" id="9B7-gL-Bk3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZQS-WY-iDD" secondAttribute="trailing" constant="72" id="CAf-EU-mK5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0sr-Ka-YkT" secondAttribute="trailing" constant="128" id="G4p-Fo-uSW"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BKR-3G-Fbu" secondAttribute="trailing" constant="20" symbolic="YES" id="JC0-Mt-APO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hxr-JH-0Sh" secondAttribute="trailing" constant="68" id="P8B-mu-eDk"/>
                             <constraint firstItem="BKR-3G-Fbu" firstAttribute="top" secondItem="r6v-CT-IKY" secondAttribute="bottom" constant="70" id="POq-5z-iUx"/>
                             <constraint firstItem="0sr-Ka-YkT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="U30-DF-6Zp"/>
+                            <constraint firstItem="ZQS-WY-iDD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="ZHU-N5-o92"/>
                             <constraint firstItem="r6v-CT-IKY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="b4d-hR-bfE"/>
+                            <constraint firstItem="ZQS-WY-iDD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="bM9-vX-4E5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r6v-CT-IKY" secondAttribute="trailing" constant="68" id="fmI-Rw-CsS"/>
                             <constraint firstItem="BKR-3G-Fbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="m8O-Q2-F5V"/>
                             <constraint firstItem="Hxr-JH-0Sh" firstAttribute="top" secondItem="r6v-CT-IKY" secondAttribute="bottom" constant="73" id="oOP-El-hlw"/>
                             <constraint firstItem="r6v-CT-IKY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q8o-DI-Uvt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZQS-WY-iDD" secondAttribute="trailing" constant="72" id="yGY-oe-YyW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZQS-WY-iDD" secondAttribute="bottom" constant="141" id="znv-Mm-Ofv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cgpaLabel" destination="Hxr-JH-0Sh" id="v0i-Oz-d8b"/>
+                        <outlet property="labelText" destination="ZQS-WY-iDD" id="igp-AX-N8C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="88.605697151424295"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="6wE-NW-a0f">
-            <objects>
-                <viewController id="bRO-QC-gX8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rSs-Sl-hhd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4X-dM-9hc">
-                                <rect key="frame" x="99" y="270" width="176" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="G2s-gM-uEF"/>
-                                    <constraint firstAttribute="width" constant="176" id="c7D-1U-k3x"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="h4X-dM-9hc" firstAttribute="leading" secondItem="DsX-ed-s6b" secondAttribute="leading" constant="99" id="JcA-mf-Agw"/>
-                            <constraint firstItem="DsX-ed-s6b" firstAttribute="trailing" secondItem="h4X-dM-9hc" secondAttribute="trailing" constant="100" id="Y9X-O0-zGe"/>
-                            <constraint firstItem="h4X-dM-9hc" firstAttribute="top" secondItem="DsX-ed-s6b" secondAttribute="top" constant="250" id="kjj-MC-3xT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="DsX-ed-s6b"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lib-jg-YRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="789.60000000000002" y="88.605697151424295"/>
         </scene>
     </scenes>
     <resources>

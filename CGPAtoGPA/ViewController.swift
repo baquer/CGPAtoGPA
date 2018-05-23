@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var cgpaLabel: UITextField!
+    @IBOutlet weak var labelText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +23,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func checkButtonPressed(_ sender: Any) {
+        guard let cgpa = Int(cgpaLabel.text!) else { return }
+        if cgpa > 6 && cgpa <= 10 {
+            labelText.text = "Your GPA Is 4"
+        }
+        else if cgpa > 5 && cgpa <= 6 {
+            labelText.text = "Your GPA Is 3.5"
+        }
+        else if cgpa > 4 && cgpa <= 5 {
+            labelText.text = "Your GPA Is 3"
+        }
+        else {
+            labelText.text = "Your GPA Is 2"
+        }
     }
     
 }
